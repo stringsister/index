@@ -1583,101 +1583,144 @@ input, select, textarea {
 
 /* Button */
 
-	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
-	button,
+	input[type="button"],
 	.button {
-		-moz-transition: background-color .25s ease-in-out;
-		-webkit-transition: background-color .25s ease-in-out;
-		-ms-transition: background-color .25s ease-in-out;
-		transition: background-color .25s ease-in-out;
+		-moz-appearance: none;
 		-webkit-appearance: none;
-		display: inline-block;
-		background-color: #222222;
-		color: #ffffff;
-		border: 0;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		background-color: transparent;
+		border-radius: 0.35em;
+		border: solid 3px #efefef;
+		color: #787878 !important;
 		cursor: pointer;
-		outline: 0;
-		padding: 0.7em 1.5em 0.7em 1.5em;
+		display: inline-block;
+		font-weight: 400;
+		height: 3.15em;
+		height: calc(2.75em + 6px);
+		line-height: 2.75em;
+		min-width: 10em;
+		padding: 0 1.5em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
 	}
 
-		input[type="button"]:hover,
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
-		button:hover,
+		input[type="button"]:hover,
 		.button:hover {
-			background-color: #333333;
+			border-color: #49bf9d;
+			color: #49bf9d !important;
 		}
 
-		input[type="button"]:active,
 		input[type="submit"]:active,
 		input[type="reset"]:active,
-		button:active,
+		input[type="button"]:active,
 		.button:active {
-			background-color: #444444;
+			background-color: rgba(73, 191, 157, 0.1);
+			border-color: #49bf9d;
+			color: #49bf9d !important;
 		}
 
-		input[type="button"].alt,
-		input[type="submit"].alt,
-		input[type="reset"].alt,
-		button.alt,
-		.button.alt {
-			background-color: #777777;
+		input[type="submit"].icon,
+		input[type="reset"].icon,
+		input[type="button"].icon,
+		.button.icon {
+			padding-left: 1.35em;
 		}
 
-			input[type="button"].alt:hover,
-			input[type="submit"].alt:hover,
-			input[type="reset"].alt:hover,
-			button.alt:hover,
-			.button.alt:hover {
-				background-color: #888888;
+			input[type="submit"].icon:before,
+			input[type="reset"].icon:before,
+			input[type="button"].icon:before,
+			.button.icon:before {
+				margin-right: 0.5em;
 			}
 
-			input[type="button"].alt:active,
-			input[type="submit"].alt:active,
-			input[type="reset"].alt:active,
-			button.alt:active,
-			.button.alt:active {
-				background-color: #999999;
-			}
+		input[type="submit"].fit,
+		input[type="reset"].fit,
+		input[type="button"].fit,
+		.button.fit {
+			min-width: 0;
+			width: 100%;
+		}
 
-		input[type="button"].small,
 		input[type="submit"].small,
 		input[type="reset"].small,
-		button.small,
+		input[type="button"].small,
 		.button.small {
-			font-size: 0.75em;
+			font-size: 0.8em;
 		}
 
-		input[type="button"].large,
 		input[type="submit"].large,
 		input[type="reset"].large,
-		button.large,
+		input[type="button"].large,
 		.button.large {
-			font-size: 1.25em;
-			padding: 0.5em 1.25em 0.5em 1.25em;
+			font-size: 1.35em;
 		}
 
-		input[type="button"].xlarge,
-		input[type="submit"].xlarge,
-		input[type="reset"].xlarge,
-		button.xlarge,
-		.button.xlarge {
-			font-size: 1.5em;
-			padding: 0.5em 1.25em 0.5em 1.25em;
+		input[type="submit"].primary,
+		input[type="reset"].primary,
+		input[type="button"].primary,
+		.button.primary {
+			background-color: #615568;
+			border-color: #615568;
+			color: #ffffff !important;
 		}
 
-		@media screen and (max-width: 736px) {
-
-			input[type="button"],
-			input[type="submit"],
-			input[type="reset"],
-			button,
-			.button {
-				width: 100%;
+			input[type="submit"].primary:hover,
+			input[type="reset"].primary:hover,
+			input[type="button"].primary:hover,
+			.button.primary:hover {
+				background-color: #5cc6a7;
+				border-color: #5cc6a7;
 			}
 
+			input[type="submit"].primary:active,
+			input[type="reset"].primary:active,
+			input[type="button"].primary:active,
+			.button.primary:active {
+				background-color: #615568;
+				border-color: #615568;
+			}
+
+		input[type="submit"].disabled, input[type="submit"]:disabled,
+		input[type="reset"].disabled,
+		input[type="reset"]:disabled,
+		input[type="button"].disabled,
+		input[type="button"]:disabled,
+		.button.disabled,
+		.button:disabled {
+			background-color: #e7e7e7 !important;
+			border-color: #e7e7e7 !important;
+			color: #b2b2b2 !important;
+			cursor: default;
+		}
+
+/* List */
+
+	ul {
+		list-style: disc;
+		padding-left: 1em;
+	}
+
+		ul li {
+			padding-left: 0.5em;
+		}
+
+	ol {
+		list-style: decimal;
+		padding-left: 1.25em;
+	}
+
+		ol li {
+			padding-left: 0.25em;
 		}
 
 /* List */
